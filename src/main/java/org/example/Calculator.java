@@ -52,30 +52,157 @@ public class Calculator {
         double result;
         double result1;
 
+        if(cal1.equals("*") || cal1.equals("/") && cal2.equals("+") || cal2.equals("-")) {
+
+            switch(cal1){
+                case "*":
+                    result1 = num1 * num2;
+                    System.out.println(num1 + " * " + num2 + " = " + result1);
+                    if(cal2.equals("+")){
+                        result = result1 + num3;
+                        System.out.println(result1 + " + " + num3 + " = " + result);
+                    } else if (cal2.equals("-")) {
+                        result = result1 - num2;
+                        System.out.println(result1 + " - " + num3 + " = " + result);
+                    }
+                    break;
+
+                case "/":
+                    result1 = num1 / num2;
+                    System.out.println(num1 + " / " + num2 + " = " + result1);
+                    if(cal2.equals("+")){
+                        result = result1 + num3;
+                        System.out.println(result1 + " + " + num3 + " = " + result);
+                    } else if (cal2.equals("-")) {
+                        result = result1 - num2;
+                        System.out.println(result1 + " - " + num3 + " = " + result);
+                    } else {
+                        System.out.println("ERROR");
+                    }
+            }
+        }
+
+        else if(cal2.equals("*") || cal2.equals("/") && cal1.equals("+") || cal1.equals("-")) {
+
+            switch(cal2){
+                case "*":
+                    result1 = num2 * num3;
+                    System.out.println(num2 + " * " + num3 + " = " + result1);
+
+                    if(cal1.equals("+")){
+                        result = result1 + num1;
+                        System.out.println(result1 + " + " + num1 + " = " + result);
+                    } else if (cal1.equals("-")) {
+                        result = result1 - num1;
+                        System.out.println(result1 + " - " + num1 + " = " + result);
+                    }
+                    break;
+
+                case "/":
+                    result1 = num2 / num3;
+                    System.out.println(num2 + " / " + num3 + " = " + result1);
+                    if(cal1.equals("+")){
+                        result = result1 + num1;
+                        System.out.println(result1 + " + " + num1 + " = " + result);
+                    } else if (cal1.equals("-")) {
+                        result = result1 - num1;
+                        System.out.println(result1 + " - " + num1 + " = " + result);
+                    } else {
+                        System.out.println("ERROR");
+                    }
+            }
+
+        }
+        else{
+            switch(cal1){
+                case "+":
+                    result1 = num1 + num2;
+                    switch (cal2) {
+                        case "+":
+                            result = result1 + num3;
+                            System.out.println(num1 + cal1 + num2 + cal2 + num3 + " = " + result);
+                            break;
+                        case "-":
+                            result = result1 - num3;
+                            System.out.println(num1 + cal1 + num2 + cal2 + num3 + " = " + result);
+                            break;
+                        case "*":
+                            result = result1 * num3;
+                            System.out.println(num1 + cal1 + num2 + cal2 + num3 + " = " + result);
+                            break;
+                        case "/":
+                            result = result1 / num3;
+                            System.out.println(num1 + cal1 + num2 + cal2 + num3 + " = " + result);
+                            break;
+                    }
+                    break;
+                case "-":
+                    result1 = num1 - num2;
+                    switch (cal2) {
+                        case "+":
+                            result = result1 + num3;
+                            System.out.println(num1 + cal1 + num2 + cal2 + num3 + " = " + result);
+                            break;
+                        case "-":
+                            result = result1 - num3;
+                            System.out.println(num1 + cal1 + num2 + cal2 + num3 + " = " + result);
+                            break;
+                        case "*":
+                            result = result1 * num3;
+                            System.out.println(num1 + cal1 + num2 + cal2 + num3 + " = " + result);
+                            break;
+                        case "/":
+                            result = result1 / num3;
+                            System.out.println(num1 + cal1 + num2 + cal2 + num3 + " = " + result);
+                            break;
+                    }
+                    break;
+                case "*":
+                    result1 = num1 * num2;
+                    switch (cal2) {
+                        case "+":
+                            result = result1 + num3;
+                            System.out.println(num1 + cal1 + num2 + cal2 + num3 + " = " + result);
+                            break;
+                        case "-":
+                            result = result1 - num3;
+                            System.out.println(num1 + cal1 + num2 + cal2 + num3 + " = " + result);
+                            break;
+                        case "*":
+                            result = result1 * num3;
+                            System.out.println(num1 + cal1 + num2 + cal2 + num3 + " = " + result);
+                            break;
+                        case "/":
+                            result = result1 / num3;
+                            System.out.println(num1 + cal1 + num2 + cal2 + num3 + " = " + result);
+                            break;
+                    }
+                    break;
+                case "/":
+                    result1 = num1 / num2;
+                    switch (cal2) {
+                        case "+":
+                            result = result1 + num3;
+                            System.out.println(num1 + cal1 + num2 + cal2 + num3 + " = " + result);
+                            break;
+                        case "-":
+                            result = result1 - num3;
+                            System.out.println(num1 + cal1 + num2 + cal2 + num3 + " = " + result);
+                            break;
+                        case "*":
+                            result = result1 * num3;
+                            System.out.println(num1 + cal1 + num2 + cal2 + num3 + " = " + result);
+                            break;
+                        case "/":
+                            result = result1 / num3;
+                            System.out.println(num1 + cal1 + num2 + cal2 + num3 + " = " + result);
+                            break;
+                    }
+                    break;
+            }
 
 
-
-
-
-//        if(cal1.equals("*") || cal1.equals("/")) {
-//            switch(cal1){
-//                case "*":
-//                    result1 = num1 * num2;
-//                    System.out.println(num1 + " * " + num2 + " = " + result1);
-//                    break;
-//                case "/":
-//                    if(num2 == 0){
-//                        System.out.println("The Division Number Can Not Be 0.");
-//                    }else{
-//                        result1 = num1 / num2;
-//                        System.out.println(num1 + " / " + num2 + " = " + result1);
-//                    }
-//
-//            }
-//
-//
-//        }
-
+        }
 
 
     }

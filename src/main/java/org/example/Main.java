@@ -11,7 +11,7 @@ public class Main {
         Scanner scanner = new Scanner(System.in);
         //String oper = scanner.nextLine();
 
-        String oper = "2/2";
+        String oper = "1*2+3";
 
         System.out.println("The length is " + oper.length());
 
@@ -27,7 +27,11 @@ public class Main {
 
 
         Calculator calculator = new Calculator();
-        calculator.simpleCalculation(oper);
+//        calculator.simpleCalculation(oper);
+
+        calculator.multiCalculation(oper);
+
+
 
 
 
